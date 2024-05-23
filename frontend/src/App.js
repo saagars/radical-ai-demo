@@ -4,15 +4,13 @@ import './App.css';
 import './bootstrap-5.0.2-dist/css/bootstrap.min.css'
 import StructureViewer from './Components/StructureViewer';
 
+/**
+ * We would want to use Typescript or typing extension for js - but for the purposes of a simple demo webapp
+ * We just used simple javascript react
+ * 
+ * @returns Main react component for the webApp
+ */
 function App() {
-  const [currentTime, setCurrentTime] = useState(0);
-
-  useEffect(() => {
-    fetch('/api/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-    });
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">

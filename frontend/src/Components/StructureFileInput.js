@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+/**
+ * 
+ * @param {*} recivedResponse - Functional callback when we get a server response for the file upload 
+ * @returns Component to upload json/cif file to the server - does simple frontend-verification, handles 
+ * loading spinny and response
+ */
 function StructureFileInput({receivedResponse}) {
 
     const [file, setFile] = useState()
@@ -51,9 +57,9 @@ function StructureFileInput({receivedResponse}) {
     return (
         <div className="FileUpload">
           <div class="input-group mb-3 custom-file-button disabled" onSubmit={handleSubmit}>
-              <label for="formFile" class="input-group-text disabled">Submit a Structure file</label>
+              <label for="formFile" class="input-group-text disabled">Select a Structure file</label>
               <input class="form-control" type="file" id="formFile" onChange={handleChange} />
-              <button class="btn btn-light" type="button" id="inputGroupFileAddon04" onClick={handleSubmit}>Upload</button>
+              <button class="btn btn-light" type="button" id="inputGroupFileAddon04" onClick={handleSubmit}>Submit</button>
               {spinner} 
           </div>
           {errorMessage}

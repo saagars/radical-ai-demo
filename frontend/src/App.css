@@ -37,6 +37,11 @@
   }
 }
 
+/* Extra CSS added below this line
+ * Should organize into files/namespaces with more specific class names 
+ */
+
+ /* Gets rid of the default file upload button on the file input */
 .custom-file-button input[type=file] {
   margin-left: -2px !important;
 }
